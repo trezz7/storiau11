@@ -3,72 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ricerca di Storia</title>
+  <title>Unità 11</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
+      background: linear-gradient(135deg, #1d1e22, #28313b, #485563);
       color: white;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 40px;
+      animation: fadeIn 2s ease-in;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 50px;
-      animation: fadeInDown 1s ease-out;
-    }
-    .buttons-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      width: 80%;
-      max-width: 1000px;
-      animation: fadeInUp 1.5s ease-out;
-    }
-    .button {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid white;
-      border-radius: 20px;
-      padding: 40px;
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+      animation: slideDown 1.5s ease-in-out;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .btn {
+      background: #ffffff10;
+      border: 2px solid #ffffff30;
       color: white;
+      padding: 25px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
       text-decoration: none;
+      border-radius: 15px;
       transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 2s ease-in;
     }
-    .button:hover {
+    .btn:hover {
       transform: translateY(-5px) scale(1.05);
-      background-color: rgba(255, 255, 255, 0.2);
+      background: #ffffff25;
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideDown {
+      from { transform: translateY(-60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <h1>Unità 11</h1>
-  <div class="buttons-container">
-    <a class="button" href="stati-uniti.html">Stati Uniti</a>
-    <a class="button" href="sud-america.html">Sud America</a>
-    <a class="button" href="unione-sovietica.html">Unione Sovietica</a>
-    <a class="button" href="europa.html">Europa</a>
+  <div class="buttons">
+    <a class="btn" href="stati-uniti.html">Stati Uniti</a>
+    <a class="btn" href="sud-america.html">Sud America</a>
+    <a class="btn" href="unione-sovietica.html">Unione Sovietica</a>
+    <a class="btn" href="europa.html">Europa</a>
   </div>
 </body>
 </html>
+
