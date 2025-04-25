@@ -2,41 +2,55 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sud America</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #fff7f0;
-      margin: 0;
+      background: linear-gradient(135deg, #1a1a1a, #3a3a3a, #5a5a5a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 40px;
+      animation: fadeIn 2s ease-in;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      color: #c06c00;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      margin-bottom: 30px;
+      animation: slideDown 1.5s ease-in-out;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
     }
     p {
       font-size: 1.2rem;
-      line-height: 1.6;
-      color: #444;
+      line-height: 1.8;
+      max-width: 900px;
+      animation: fadeIn 2.5s ease-in;
     }
     a {
-      display: inline-block;
-      margin-top: 30px;
+      margin-top: 40px;
+      font-size: 1.1rem;
+      color: #00e676;
       text-decoration: none;
-      color: #c06c00;
-      font-weight: bold;
+      animation: fadeIn 3s ease-in;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>Storia del Sud America</h1>
-  <p>
-    Il Sud America ha una storia ricca e complessa, segnata dalle civiltà precolombiane come gli Inca,
-    la conquista spagnola e portoghese, le guerre d'indipendenza nel XIX secolo e i numerosi cambiamenti
-    politici del XX secolo.
-  </p>
-  <a href="index.html">← Torna alla homepage</a>
+  <h1>Sud America</h1>
+  <p>In questa sezione si esplora la storia del Sud America, analizzando i processi di colonizzazione, le lotte per l'indipendenza e le successive trasformazioni politiche e sociali. Verranno approfonditi i regimi dittatoriali, i movimenti rivoluzionari e l'evoluzione democratica di molti paesi sudamericani.</p>
+  <a href="index.html">&#8592; Torna alla Home</a>
 </body>
 </html>
