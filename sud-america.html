@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sud America</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sud America - Post-colonialismo</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #1a1a1a, #3a3a3a, #5a5a5a);
-      color: white;
+      background: linear-gradient(135deg, #a52714, #d84315, #ff7043);
+      color: #fff9f0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 40px;
-      animation: fadeIn 2s ease-in;
+      align-items: flex-start;
+      padding: 60px;
+      animation: fadeIn 1.5s ease;
     }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      margin-bottom: 30px;
-      animation: slideDown 1.5s ease-in-out;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+      animation: slideDown 1.2s ease;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     }
     p {
       font-size: 1.2rem;
+      max-width: 800px;
       line-height: 1.8;
-      max-width: 900px;
-      animation: fadeIn 2.5s ease-in;
+      animation: fadeInText 2s ease;
     }
     a {
       margin-top: 40px;
       font-size: 1.1rem;
-      color: #00e676;
+      color: #fff59d;
       text-decoration: none;
-      animation: fadeIn 3s ease-in;
+      animation: fadeInLink 2.5s ease;
     }
+    a:hover { text-decoration: underline; }
     @keyframes slideDown {
-      from { transform: translateY(-60px); opacity: 0; }
+      from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
-    @keyframes fadeIn {
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInLink {
       from { opacity: 0; }
       to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>Sud America</h1>
-  <p>In questa sezione si esplora la storia del Sud America, analizzando i processi di colonizzazione, le lotte per l'indipendenza e le successive trasformazioni politiche e sociali. Verranno approfonditi i regimi dittatoriali, i movimenti rivoluzionari e l'evoluzione democratica di molti paesi sudamericani.</p>
+  <h1>Sud America nel Dopoguerra</h1>
+  <p>Dopo il colonialismo, molti Paesi sudamericani affrontano instabilità politica, colpi di stato e dittature militari. Le popolazioni si mobilitano in movimenti popolari e guerriglieri. La Guerra Fredda influenza pesantemente la politica della regione, mentre si sviluppano lotte per i diritti sociali e le riforme economiche.</p>
   <a href="index.html">&#8592; Torna alla Home</a>
 </body>
 </html>
+
