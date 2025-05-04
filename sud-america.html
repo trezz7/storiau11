@@ -9,55 +9,160 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #a52714, #d84315, #ff7043);
+      background: linear-gradient(135deg, #8bc34a, #cddc39, #ffeb3b); /* Misto tra verde e giallo */
       color: #fff9f0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       padding: 60px;
-      animation: fadeIn 1.5s ease;
+      animation: fadeInBody 1.5s ease;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.3); /* Sfondo trasparente per il contenitore */
+      padding: 40px;
+      border-radius: 25px;
+      border: 4px solid #ffeb3b; /* Bordo giallo per la cornice */
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Ombra per far risaltare la cornice */
+      max-width: 900px;
+      width: 100%;
+      animation: slideUp 1s ease-out;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
       animation: slideDown 1.2s ease;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      color: #ffeb3b; /* Giallo per il titolo */
+    }
+    h2, h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffeb3b; /* Colore dorato per i sottotitoli */
+      margin-bottom: 10px;
+      text-align: center;
     }
     p {
-      font-size: 1.2rem;
-      max-width: 800px;
+      font-size: 1.3rem;
       line-height: 1.8;
-      animation: fadeInText 2s ease;
+      animation: fadeInText 1.5s ease-in-out;
+      text-align: justify;
+      margin-bottom: 30px;
     }
     a {
-      margin-top: 40px;
-      font-size: 1.1rem;
-      color: #fff59d;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ffeb3b;
       text-decoration: none;
-      animation: fadeInLink 2.5s ease;
+      padding: 10px 20px;
+      border: 2px solid #ffeb3b;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
     }
-    a:hover { text-decoration: underline; }
+    a:hover {
+      background-color: #ffeb3b;
+      color: #1d1d1d;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 50%; /* Riduce la dimensione dell'immagine */
+      max-width: 500px; /* Limita la larghezza massima */
+      height: auto;
+      border-radius: 10px;
+    }
     @keyframes slideDown {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
-    @keyframes fadeInText {
+    @keyframes fadeInBody {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    @keyframes fadeInLink {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Sud America nel Dopoguerra</h1>
-  <p>Dopo il colonialismo, molti Paesi sudamericani affrontano instabilità politica, colpi di stato e dittature militari. Le popolazioni si mobilitano in movimenti popolari e guerriglieri. La Guerra Fredda influenza pesantemente la politica della regione, mentre si sviluppano lotte per i diritti sociali e le riforme economiche.</p>
-  <a href="index.html">&#8592; Torna alla Home</a>
+  <div class="container">
+    <h1>Sud America nel Dopoguerra</h1>
+    <p>Nonostante la conquista dell’indipendenza già nel XIX secolo, molti Paesi dell’America Latina continuarono a vivere in condizioni di profonda disuguaglianza sociale. La ricchezza rimaneva concentrata in poche mani, mentre la maggioranza della popolazione affrontava povertà, analfabetismo e alti tassi di mortalità infantile. A peggiorare la situazione contribuiva l’influenza crescente degli Stati Uniti, che sostituirono le ex potenze europee nel controllo politico ed economico dell’area, sostenendo regimi autoritari per proteggere i propri interessi. Lo sfruttamento alimentò, a partire dagli anni Cinquanta, movimenti di ribellione e guerriglia, spesso ispirati dalla rivoluzione cubana del 1959. Tuttavia, il sogno di emancipazione sfociò raramente in autentiche democrazie: le lotte tra ribelli e governi degenerarono in guerre civili, ostacolando ogni progresso sociale. Solo dagli anni Novanta alcuni Paesi iniziarono un lento e difficile cammino verso la democrazia.</p>
+    
+    <h2>Cile</h2>
+    <div class="image-container">
+      <img src="cile.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Il caso del Cile è emblematico: qui, nel 1970, il socialista Salvador Allende salì al potere democraticamente, ma le sue politiche di nazionalizzazione e giustizia sociale entrarono in conflitto con le multinazionali e con Washington. Nel 1973, con il supporto della CIA, il generale Augusto Pinochet rovesciò il governo e instaurò una delle dittature più feroci dell’America Latina, con migliaia di morti, desaparecidos e torture. Il regime crollò solo nel 1988, dopo un referendum perso dal dittatore, seguito da elezioni democratiche.</p>
+
+    <h2>Bolivia</h2>
+<div class="image-container">
+      <img src="bolivia.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>In Bolivia, dopo il colpo di Stato del 1964, il Paese fu travolto da scontri tra militari e guerriglieri marxisti. Fu qui che, nel 1967, venne ucciso Che Guevara. Solo dalla metà degli anni Ottanta la Bolivia tornò alla democrazia, ma dovette affrontare gravi problemi legati al narcotraffico e alla produzione di coca.</p>
+
+    <h2>Nicaragua</h2>
+<div class="image-container">
+      <img src="nicaragua.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Anche in Nicaragua il potere restò a lungo nelle mani della famiglia Somoza, appoggiata dagli Stati Uniti. La rivoluzione sandinista del 1979 portò al potere Daniel Ortega, ma la sua politica riformista fu ostacolata dagli USA, che imposero finanziarono la guerriglia dei contras. Solo negli anni Novanta fu possibile iniziare un processo di pace.</p>
+
+    <h2>El Salvador</h2>
+<div class="image-container">
+      <img src="elsalvador.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>In Salvador, infine, la repressione militare e la guerra civile tra governo e guerriglieri marxisti del Fronte Farabundo Martí costarono la vita a circa 70.000 persone. L’assassinio dell’arcivescovo Oscar Romero, simbolo della resistenza pacifica, scosse l’opinione pubblica internazionale. La pace arrivò soltanto nel 1992, grazie alla mediazione dell’ONU.</p>
+    <h2>Il nazionalismo populista</h2>
+    <br><br>
+
+    <h3>Argentina</h3>
+<div class="image-container">
+      <img src="argentina.webp" alt="Immagine Età dell'Oro">
+    </div>
+    <p>In Argentina, il caso più emblematico fu quello di Perón, eletto presidente nel 1946. Perón promosse un programma politico che univa interventi sociali e industrializzazione controllata dallo Stato, con un'impostazione autoritaria. Sebbene avesse il sostegno dell’esercito e della Chiesa, fu soprattutto la sua capacità di mobilitare le classi popolari e i lavoratori urbani, anche grazie all’influenza carismatica della moglie Evita, a renderlo una figura centrale del populismo latinoamericano. Dopo la sua caduta nel 1955 e un breve ritorno al potere nel 1973, il Paese cadde in una dura dittatura militare, guidata da Videla, nel 1976, con migliaia di desaparecidos. La sconfitta nella guerra delle Falkland segnò la fine del regime e l’inizio della transizione democratica.</p>
+
+    <h3>Brasile</h3>
+<div class="image-container">
+      <img src="brasile.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Anche in Brasile si sviluppò una forma di nazionalismo populista. Vargas, al potere dal 1930 al 1954, cercò una modernizzazione alternativa sia al comunismo sia al capitalismo liberista. Nazionalizzò industrie e attuò riforme sociali, ma il suo regime era autoritario. Dopo il suo suicidio, i governi successivi proseguirono in parte le sue politiche fino al colpo di Stato del 1964, che instaurò una dittatura militare sostenuta dagli Stati Uniti. Il Brasile conobbe allora una dura repressione, l’apertura ai capitali stranieri e lo sfruttamento delle risorse naturali. Solo nel 1985 tornarono le elezioni libere.</p>
+
+    <h3>Messico</h3>
+<div class="image-container">
+      <img src="messico.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Il Messico seguì una traiettoria diversa: il Partito Rivoluzionario Istituzionale (PRI) governò ininterrottamente per tutto il secolo, garantendo stabilità politica e avviando un processo di industrializzazione. Tuttavia, non ci furono significativi miglioramenti delle condizioni di vita per la popolazione. Negli anni Ottanta, la crisi petrolifera aggravò il debito estero e minò la legittimità del PRI, fino alla storica sconfitta elettorale del 2000.</p>
+
+    <a href="index.html">&#8592; Torna alla Home</a>
+  </div>
+
+  <script>
+    // Aggiungiamo la classe per far apparire il contenitore con l'animazione
+    window.addEventListener('load', function() {
+      document.querySelector('.container').classList.add('show');
+    });
+  </script>
 </body>
 </html>
 
