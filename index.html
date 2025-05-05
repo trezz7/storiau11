@@ -73,7 +73,38 @@
       transform: translateY(-8px) scale(1.05);
       box-shadow: 0 0 25px rgba(255,255,255,0.25), 0 0 10px rgba(255,255,255,0.1) inset;
     }
+@media screen and (max-width: 768px) {
+      body {
+        padding: 30px; /* Riduci il padding su dispositivi più piccoli */
+      }
 
+      .container {
+        padding: 20px; /* Riduci il padding per dispositivi mobili */
+        max-width: 100%; /* Imposta la larghezza massima della container su 100% */
+      }
+
+      h1 {
+        font-size: 2rem; /* Riduci la dimensione del font per titoli */
+      }
+
+      h2 {
+        font-size: 1.5rem; /* Riduci la dimensione del font per h2 */
+      }
+
+      p {
+        font-size: 1rem; /* Riduci la dimensione del font per i paragrafi */
+      }
+
+      img {
+        width: 100%; /* Rendi le immagini fluide per occupare il 100% della larghezza */
+        max-width: 100%; /* Impedisci che le immagini superino la larghezza del contenitore */
+      }
+
+      video {
+        width: 100%; /* Imposta il video per occupare il 100% della larghezza */
+        height: auto; /* Adatta l'altezza in base alla larghezza */
+      }
+    }
     @keyframes fadeInBody {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -100,6 +131,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
