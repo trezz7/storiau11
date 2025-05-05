@@ -98,6 +98,38 @@
       height: auto; /* Mantiene le proporzioni dell'immagine */
       border-radius: 10px; /* Aggiungi angoli arrotondati */
     }
+@media screen and (max-width: 768px) {
+      body {
+        padding: 30px; /* Riduci il padding su dispositivi più piccoli */
+      }
+
+      .container {
+        padding: 20px; /* Riduci il padding per dispositivi mobili */
+        max-width: 100%; /* Imposta la larghezza massima della container su 100% */
+      }
+
+      h1 {
+        font-size: 2rem; /* Riduci la dimensione del font per titoli */
+      }
+
+      h2 {
+        font-size: 1.5rem; /* Riduci la dimensione del font per h2 */
+      }
+
+      p {
+        font-size: 1rem; /* Riduci la dimensione del font per i paragrafi */
+      }
+
+      img {
+        width: 100%; /* Rendi le immagini fluide per occupare il 100% della larghezza */
+        max-width: 100%; /* Impedisci che le immagini superino la larghezza del contenitore */
+      }
+
+      video {
+        width: 100%; /* Imposta il video per occupare il 100% della larghezza */
+        height: auto; /* Adatta l'altezza in base alla larghezza */
+      }
+    }
     @keyframes slideDown {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -143,3 +175,4 @@
   </script>
 </body>
 </html>
+
