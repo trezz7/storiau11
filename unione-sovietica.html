@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unione Sovietica</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
@@ -15,42 +15,180 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 40px;
-      animation: fadeIn 2s ease-in;
+      align-items: center;
+      padding: 60px;
+      animation: fadeIn 1.5s ease;
     }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 25px;
+      border: 4px solid #ff6666;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      max-width: 900px;
+      width: 100%;
+      animation: slideUp 1s ease-out;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      margin-bottom: 30px;
-      animation: slideDown 1.5s ease-in-out;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+      animation: slideDown 1.2s ease;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      color: #ffb3b3;
     }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #ffb3b3;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+
     p {
       font-size: 1.2rem;
       line-height: 1.8;
-      max-width: 900px;
-      animation: fadeIn 2.5s ease-in;
+      max-width: 800px;
+      text-align: justify;
+      animation: fadeInText 2s ease;
+      margin-bottom: 20px;
     }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
     a {
       margin-top: 40px;
       font-size: 1.1rem;
-      color: #ff6666;
+      color: #ff9999;
       text-decoration: none;
-      animation: fadeIn 3s ease-in;
+      border: 2px solid #ff9999;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
+
+    a:hover {
+      background-color: #ff9999;
+      color: #1d1d1d;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 153, 153, 0.5);
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 50%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #ff9999;
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 30px;
+      }
+
+      .container {
+        padding: 20px;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p, li {
+        font-size: 1rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     @keyframes slideDown {
-      from { transform: translateY(-60px); opacity: 0; }
+      from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <h1>Unione Sovietica</h1>
-  <p>Questa pagina è dedicata alla storia dell'Unione Sovietica, dalla Rivoluzione d'Ottobre del 1917 fino alla sua dissoluzione nel 1991. Si analizzano il regime comunista, la figura di Stalin, la Guerra Fredda, le politiche economiche e sociali, e l'influenza globale dell'URSS nel corso del Novecento.</p>
-  <a href="index.html">&#8592; Torna alla Home</a>
+  <div class="container show">
+    <h1>La "normalizzazione" brežneviana e la fine della Primavera di Praga: il ritorno all’ordine sovietico</h1>   
+    <div class="image-container">
+      <img src="russia.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Durante gli anni Sessanta e Settanta, l’Unione Sovietica consolida il suo ruolo di superpotenza all’interno del blocco comunista, in piena contrapposizione con gli Stati Uniti nella Guerra Fredda. Sotto la guida di leader come Brežnev, il regime mantiene un forte controllo politico e reprime ogni tentativo di riforma, come dimostra l’invasione della Cecoslovacchia nel 1968. L’URSS continua a investire nella corsa allo spazio e nell’industria pesante, ma inizia a mostrare segni di stagnazione economica. All’interno, la società vive sotto sorveglianza, mentre intellettuali e dissidenti vengono spesso perseguitati.</p>
+
+    <h2>Primavera di Praga (1968)</h2>
+    <p>La Primavera di Praga fu un periodo di riforme politiche e liberalizzazione nella Cecoslovacchia, avviato nel gennaio 1968, quando Alexander Dubček divenne segretario del Partito Comunista Cecoslovacco. Dubček cercò di instaurare un "socialismo dal volto umano", con riforme come:</p>
+    <ul>
+      <li>maggiore libertà di stampa e di espressione,</li>
+      <li>decentralizzazione economica,</li>
+      <li>riduzione del controllo del partito sulla società.</li>
+    </ul>
+    <p>Queste riforme preoccuparono l'Unione Sovietica e gli altri paesi del Patto di Varsavia, che temevano un contagio riformista nel blocco orientale.</p>
+
+    <h2>Invasione</h2>
+    <p>Il 20-21 agosto 1968, le truppe del Patto di Varsavia (guidate dall'URSS) invasero la Cecoslovacchia e posero fine al movimento, ristabilendo un controllo autoritario.</p>
+
+    <h2>Normalizzazione brežneviana</h2>
+<div class="image-container">
+      <img src="breznev.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Dopo la repressione della Primavera di Praga, iniziò il processo detto di "normalizzazione", guidato dal nuovo leader Gustáv Husák sotto l'influenza dell'URSS di Leonid Brežnev.</p>
+    <p>Caratteristiche della normalizzazione:</p>
+    <ul>
+      <li>Ripristino del controllo autoritario del partito comunista,</li>
+      <li>Censura dei media e repressione del dissenso,</li>
+      <li>Epurazione dei riformisti (come Dubček),</li>
+      <li>Ri-centralizzazione economica e politica,</li>
+      <li>Fedeltà stretta alla linea sovietica.</li>
+    </ul>
+    <p>La normalizzazione fu un periodo di stagnazione politica e culturale, durato fino alla Rivoluzione di velluto del 1989.</p>
+
+    <a href="index.html">&#8592; Torna alla Home</a>
+  </div>
 </body>
 </html>
