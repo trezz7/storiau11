@@ -15,49 +15,233 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       padding: 60px;
       animation: fadeIn 1.5s ease;
     }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 25px;
+      border: 4px solid #1e90ff;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      max-width: 900px;
+      width: 100%;
+      animation: slideUp 1s ease-out;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 20px;
       animation: slideDown 1.2s ease;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      color: #add8e6;
+      text-align: center;
     }
+
+    h2 {
+      color: #add8e6;
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+
     p {
       font-size: 1.2rem;
       max-width: 800px;
       line-height: 1.8;
       animation: fadeInText 2s ease;
+      text-align: justify;
+      margin-bottom: 20px;
     }
+
     a {
       margin-top: 40px;
       font-size: 1.1rem;
-      color: #ffd700;
+      color: #add8e6;
       text-decoration: none;
-      animation: fadeInLink 2.5s ease;
+      border: 2px solid #add8e6;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
-    a:hover { text-decoration: underline; }
-    @keyframes slideDown {
+
+    a:hover {
+      background-color: #add8e6;
+      color: #1d1d1d;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(173, 216, 230, 0.5);
+    }
+
+.image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 50%; /* Riduce la dimensione dell'immagine */
+      max-width: 500px; /* Limita la larghezza massima */
+      height: auto;
+      border-radius: 10px;
+    }    
+.video-container {
+  display: flex;
+  justify-content: center;  /* Centra orizzontalmente */
+  align-items: center;      /* Centra verticalmente */
+  height: 100vh;            /* Imposta l'altezza della pagina */
+}
+  @media screen and (max-width: 768px) {
+      body {
+        padding: 30px; /* Riduci il padding su dispositivi più piccoli */
+      }
+
+      .container {
+        padding: 20px; /* Riduci il padding per dispositivi mobili */
+        max-width: 100%; /* Imposta la larghezza massima della container su 100% */
+      }
+
+      h1 {
+        font-size: 2rem; /* Riduci la dimensione del font per titoli */
+      }
+
+      h2 {
+        font-size: 1.5rem; /* Riduci la dimensione del font per h2 */
+      }
+
+      p {
+        font-size: 1rem; /* Riduci la dimensione del font per i paragrafi */
+      }
+
+      img {
+        width: 100%; /* Rendi le immagini fluide per occupare il 100% della larghezza */
+        max-width: 100%; /* Impedisci che le immagini superino la larghezza del contenitore */
+      }
+
+      video {
+        width: 100%; /* Imposta il video per occupare il 100% della larghezza */
+        height: auto; /* Adatta l'altezza in base alla larghezza */
+      }
+    }
+
+@keyframes slideDown {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     @keyframes fadeInText {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    @keyframes fadeInLink {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Stati Uniti negli anni di Kennedy</h1>
-  <p>Durante la presidenza di John F. Kennedy, gli Stati Uniti affrontano la crisi dei missili di Cuba, rafforzano la corsa allo spazio e si pongono come guida del mondo occidentale nel pieno della Guerra Fredda. È un periodo di grandi tensioni internazionali e di cambiamenti sociali interni, come l'avvio del movimento per i diritti civili.</p>
-  <a href="index.html">&#8592; Torna alla Home</a>
+  <div class="container">
+    <h1>Stati Uniti negli anni di Kennedy</h1>
+<div class="image-container">
+      <img src="kennedy.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Negli anni Cinquanta gli Stati Uniti concentrarono gran parte della propria attenzione su scenari internazionali, come la guerra di Corea, trascurando problemi sociali interni. Questa tendenza contribuì alla vittoria del democratico John Fitzgerald Kennedy alle elezioni del 1960, che sconfisse di poco il repubblicano Richard Nixon, promettendo una nuova frontiera, cioè una svolta nella politica statunitense.</p>
+
+    <p>Il neo-eletto presidente, tenne il 25 gennaio del 1961 un discorso in cui elencava i punti essenziali del suo programma, evento che entrerà nella storia per essere la prima conferenza presidenziale nel mondo ad essere trasmessa in televisione. I punti più importanti sono:
+    <br>1. La difesa della libertà in senso anticomunista
+    <br>2. L’attuazione di politiche sociali in aiuto dei più deboli a livello internazionale
+    <br>3. Un nuovo rapporto con i paesi del Sud America, formando l’Allenza per il progresso
+    <br>4. Trasformare le Nazioni Unite in un effettivo agente di pace
+    <br>5. La ricerca di un accordo con i paesi avversari
+    <br>6. La lotta a livello sociale contro i nemici dell’uomo come la tirannide, la miseria e la guerra</p>
+
+<div class="video-container">
+  <video width="640" height="360" controls>
+    <source src="kennedy.mp4" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
+</div>
+
+
+    <p>Tuttavia, nel tentativo di arginare l’influenza sovietica, gli USA finirono per sostenere regimi autoritari e movimenti anticomunisti corrotti. Esempi emblematici sono il movimento CONTRAS in Nicaragua o l’operazione GLADIO.</p>
+
+    <h2>Gladio</h2>
+<div class="image-container">
+      <img src="gladio.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Gladio era il nome in codice della sezione italiana della rete clandestina Stay-Behind, creata dopo la Seconda guerra mondiale con il supporto della CIA e della NATO. Il suo scopo ufficiale era organizzare una resistenza armata nel caso di un'invasione sovietica in Europa occidentale. Gladio venne fondato il 26 novembre 1956, in collaborazione con il SIFAR (Servizio Informazioni Forze Armate), ma attività simili erano già attive dal 1948, in coincidenza con l’intervento statunitense nelle elezioni italiane. In quel contesto, la CIA finanziò la Democrazia Cristiana, in cambio di politiche anticomuniste e filoamericane. I servizi segreti americani chiesero aiuto a capi mafiosi, uno dei più noti è Lucky Luciano, i quali in cambio di favoreggiamenti avrebbero garantito supporto elettorale alla DC. Tra le varie controversie, molti soldati vicini al progetto Gladio appartenevano all’ambiente fascista, tra cui Valerio Borghese, ex comandate della X MAS fascista, che progettò un colpo di stato nel 1970, che prese il nome di golpe Borghese, che però venne annullato all’ultimo momento per motivazioni ancora oggi ignote.</p>
+
+    <h2>Contras</h2>
+<div class="image-container">
+      <img src="contrass.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>I Contras erano gruppi armati di opposizione al governo sandinista del Nicaragua, sostenuti dagli Stati Uniti durante gli anni '80. Dopo la rivoluzione del 1979, che portò al potere il Fronte Sandinista di Liberazione Nazionale (FSLN), gli Stati Uniti preoccupati per la diffusione del comunismo in America Latina iniziarono a finanziare e addestrare i Contras. Nel 1984, però, il Congresso americano approvò una serie di leggi note come emendamenti Boland, che proibivano espressamente il finanziamento diretto ai Contras. Per aggirare questo divieto, alcuni membri della CIA misero in atto un'operazione segreta che divenne nota come scandalo Iran-Contras. Gli Stati Uniti vendevano armi in segreto all'Iran (all'epoca considerato un paese ostile) e favorendo lo spaccio di cocaina a basso costo nel paese, importandola con gli stessi aerei che all’andata trasportavano le armi. Questo legame tra traffico di droga e finanziamento dei Contras emerse grazie alle inchieste del giornalista Gary Webb. Secondo Webb, il traffico di cocaina avrebbe favorito la diffusione del crack negli Stati Uniti negli anni '80, in particolare nei quartieri afroamericani di Los Angeles.</p>
+
+    <p>Durante la presidenza Kennedy e quella di Nikita Kruscev, leader sovietico, si cercò un dialogo, ma la tensione crebbe in modo drammatico:
+    <br>• Muro di Berlino (1961): simbolo della divisione ideologica tra Est e Ovest.
+    <br>• Crisi di Cuba (1962): portò il mondo sull’orlo di una guerra nucleare.
+    <br>• Guerra del Vietnam: gli Stati Uniti iniziarono a intervenire massicciamente negli anni '60.</p>
+
+    <h2>Politica interna</h2>
+
+    <p>In politica interna, cercò di combattere la disoccupazione promuovendo lavori pubblici, riprendendo le teorie di Keynes adottate nel 1931 dal democratico Roosevelt nel New Deal, per combattere la crisi di Wall Street. Aumentò gli stanziamenti per la corsa allo spazio e provò a rendere pubblica l’assistenza sanitaria e la scuola trovando l’opposizione dal Congresso.</p>
+
+    <p>La nuova frontiera dava ampio spazio alle rivendicazioni sociali, tra cui la più discussa lotta contro la discriminazione razziale. Kennedy sostenne le marce e le proteste per i diritti civili, attirandosi l’ostilità dei bianchi segregazionisti del Sud, di alcuni settori industriali e di ambienti filosovietici. Per questo motivo il 22 novembre 1963 a Dallas in Texas, John Fitzgerald Kennedy fu ucciso da Oswald, un giovane simpatizzante comunista.</p>
+<div class="image-container">
+      <img src="morte.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <h2>Lyndon B. Johnson</h2>
+<div class="image-container">
+      <img src="lyndon.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Il successore fu, il vice-presidente, Lyndon B. Johnson che portò avanti i progetti kennediani con la sua politica della Great Society, che prevedeva iniziative di giustizia sociale, come la legge contro la povertà o il Voting Rights Bill, una legge fortemente voluta da Martin Luther King, che aboliva la tassa di iscrizione alle liste elettorali e vietava il test di alfabetizzazione che abilitava al voto.</p>
+
+    <p>Il movimento dei neri per i diritti civili prese due strade:
+    <br>1. Martin Luther King: in modo pacifico proponeva iniziative sociali
+    <br>2. Malcolm X e le Pantere Nere: progettavano una trasformazione violenta della società americana.</p>
+
+    <p>Le tensioni razziali aumentarono dopo la nascita e diffusione dagli Stati del Sud del Ku Klux Klan, un’organizzazione razzista paramilitare. La scintilla scoppiò però quando gli Stati Uniti decisero di intervenire pesantemente in Vietnam, scatenando migliaia di proteste studentesche. Il 1968 fu segnato dall’omicidio di Martin Luther King.</p>
+
+    <h2>Richard Nixon</h2>
+<div class="image-container">
+      <img src="nixon.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>Nello stesso anno le elezioni furono vinte dal repubblicano Richard Nixon, conservatore e anticomunista. Contrariamente ai timori iniziali, Nixon avviò un dialogo con i Paesi comunisti:
+    <br>• nel 1972 visitò la Cina e l’Unione Sovietica
+    <br>• firmò un importante accordo sulla limitazione delle armi nucleari, gli accordi SALT
+    <br>• Nel 1973 ordinò il ritiro delle truppe americane dal Vietnam.</p>
+
+    <h2>La fine e il caso Watergate</h2>
+<div class="image-container">
+      <img src="watergate.jpg" alt="Immagine Età dell'Oro">
+    </div>
+    <p>In politica interna affrontò l’inflazione svalutando il dollaro, ponendo fine al sistema di Bretton Woods e imponendo controlli su prezzi e salari. Rieletto nel 1972, Nixon fu costretto a dimettersi nel 1974 a causa dello scandalo Watergate, nato dal ritrovamento di microspie nel quartier generale democratico. Le indagini collegarono lo scandalo a membri del suo staff e infine a lui stesso, accusato anche di frode fiscale e raccolta illegale di fondi. Per evitare la messa in stato d'accusa da parte del Parlamento, Nixon ammise le responsabilità e si dimise. Fu poi graziato dal suo successore, evitando il processo.</p>
+
+    <a href="index.html">&#8592; Torna alla Home</a>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      document.querySelector('.container').classList.add('show');
+    });
+  </script>
 </body>
 </html>
+
 
